@@ -4,4 +4,7 @@ import scipy
 from scipy.stats import norm
 from fitting_functions import *
 data = np.loadtxt("Marshmallow.csv", delimiter=",", dtype=str)
-print(data[0,:])
+x = data[1:, 0].astype(np.float32)
+y = data[1:, 1].astype(np.float32)
+print('y = ', y)
+print('x = ', x)

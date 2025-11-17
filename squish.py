@@ -13,8 +13,6 @@ slope = params[0]
 intercept = params[1]
 Equation = print_equation(slope,intercept,'Cm','g')
 print(Equation)
-x = np.array([x])
-y = np.array([y])
 plt.figure()
 plt.scatter(x, y, label='Data')
 plt.plot(x, linear(x, slope, intercept),label='Linear Fit') #change this label if you have a non-linear fit

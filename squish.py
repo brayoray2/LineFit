@@ -9,10 +9,10 @@ y = data[1:, 1].astype(np.float32)
 print('y = ', y)
 print('x = ', x)
 params, params_cov = scipy.optimize.curve_fit(linear, x, y)
-slope = params[0]
-intercept = params[1]
+slope = round(params[0])
+intercept = round(params[1])
 Equation = print_equation(slope,intercept,'Cm','g')
-print(Equation)
+print(Equation)#The equation of the line is: 0g/Cm + 3Cm
 plt.figure()
 plt.scatter(x, y, label='Data')
 plt.plot(x, linear(x, slope, intercept),label='Linear Fit') #change this label if you have a non-linear fit
